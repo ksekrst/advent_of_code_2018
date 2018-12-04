@@ -61,3 +61,21 @@ with open(INPUT, "r") as f:
             sleepiest_minute = minute
 
     print(sleepiest_minute * sleepiest_guard)
+ 
+ 
+    print('\n---------- PT 2 --------------')
+    top_guard, top_minute, top_count = None, None, 0
+
+    for guard in guard_dict.keys():
+        # most_common is a tuple (minute, count)
+        most_common = max(
+            (kv for kv in sleep_dict[guard].items()),
+            key=lambda kv: kv[1] # kv == (minute, count)
+        )
+        if most_common[1] > top_count:
+            top_guard, (top_minute, top_count) = guard, most_common
+
+    print(f'guard: {top_guard}, minute: {top_minute}, total: {top_count}')
+    print(f'sol: {top_guard * top_minute}')
+
+
