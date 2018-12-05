@@ -14,10 +14,11 @@ with open(INPUT, "r") as f:
         try:
             if data[i].lower() == data[i+1].lower() and data[i] != data[i+1]:
                 data = data[:i] + data[i+2:] 
-                i = i - 2 # remove the index by 2 to the left when an adjacent pair has been deleted
+                if i > 0:
+                    i -= 1
                 continue
             i += 1
-        except IndexError: # check if i > 0
+        except IndexError:
             break
 
     print(len(data))
