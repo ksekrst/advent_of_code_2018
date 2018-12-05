@@ -1,7 +1,7 @@
 # https://adventofcode.com/2018/day/3
 import sys
 
-INPUT = "input3.txt" if len(sys.argv) == 1 else sys.argv[1]
+INPUT = "input.txt" if len(sys.argv) == 1 else sys.argv[1]
 print(f'Using input file "{INPUT}"')
 
 

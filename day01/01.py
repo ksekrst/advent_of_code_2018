@@ -1,6 +1,6 @@
 # https://adventofcode.com/2018/day/1
 
-INPUT = "input1.txt"
+INPUT = "input.txt"
 
 with open(INPUT, "r") as input_file:
     arr = [int(line.rstrip("\n")) for line in input_file]

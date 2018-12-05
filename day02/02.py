@@ -2,7 +2,7 @@
 
 from collections import Counter
 
-INPUT = "input2.txt"
+INPUT = "input.txt"
 
 def levenshtein(s1, s2):
     if len(s1) < len(s2):
